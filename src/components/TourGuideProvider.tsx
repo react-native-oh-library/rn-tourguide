@@ -1,13 +1,13 @@
 import mitt, { Emitter } from 'mitt'
 import * as React from 'react'
 import { StyleProp, StyleSheet, View, ViewStyle } from 'react-native'
-import { TourGuideContext, Ctx } from './TourGuideContext'
-import { useIsMounted } from '../hooks/useIsMounted'
-import { IStep, Labels, StepObject, Steps } from '../types'
-import * as utils from '../utilities'
+import { TourGuideContext, Ctx } from 'rn-tourguide/lib/components/TourGuideContext'
+import { useIsMounted } from 'rn-tourguide/lib/hooks/useIsMounted'
+import { IStep, Labels, StepObject, Steps } from 'rn-tourguide/lib/types'
+import * as utils from 'rn-tourguide/lib/utilities'
 import { Modal } from './Modal'
-import { OFFSET_WIDTH } from './style'
-import { TooltipProps } from './Tooltip'
+import { OFFSET_WIDTH } from 'rn-tourguide/lib/components/style'
+import { TooltipProps } from 'rn-tourguide/lib/components/Tooltip'
 
 const { useMemo, useEffect, useState, useRef } = React
 /*

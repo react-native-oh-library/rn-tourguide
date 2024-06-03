@@ -12,9 +12,9 @@ import {
   ScaledSize,
 } from 'react-native'
 import Svg, { PathProps } from 'react-native-svg'
-import { IStep, ValueXY } from '../types'
-import { svgMaskPathMorph } from '../utilities'
-import { AnimatedSvgPath } from './AnimatedPath'
+import { IStep, ValueXY } from 'rn-tourguide/lib/types'
+import { svgMaskPathMorph } from 'rn-tourguide/lib/utilities'
+import { AnimatedSvgPath } from 'rn-tourguide/lib/components/AnimatedPath'
 
 interface Props {
   size: ValueXY
@@ -152,7 +152,7 @@ export class SvgMask extends Component<Props, State> {
           toValue: 1,
           duration: this.props.animationDuration,
           easing: this.props.easing,
-          useNativeDriver: true,
+          useNativeDriver: false,
         }),
       )
     }

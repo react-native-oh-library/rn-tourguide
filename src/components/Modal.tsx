@@ -10,10 +10,10 @@ import {
   View,
   ViewStyle,
 } from 'react-native'
-import { BorderRadiusObject, IStep, Labels, ValueXY } from '../types'
-import styles, { MARGIN } from './style'
+import { BorderRadiusObject, IStep, Labels, ValueXY } from 'rn-tourguide/lib/types'
+import styles, { MARGIN } from 'rn-tourguide/lib/components/style'
 import { SvgMask } from './SvgMask'
-import { Tooltip, TooltipProps } from './Tooltip'
+import { Tooltip, TooltipProps } from 'rn-tourguide/lib/components/Tooltip'
 
 declare var __TEST__: boolean
 
@@ -313,12 +313,10 @@ export class Modal extends React.Component<ModalProps, State> {
   }
 
   renderNonInteractionPlaceholder() {
-    return this.props.preventOutsideInteraction ? (
-      <View
-        style={[StyleSheet.absoluteFill, styles.nonInteractionPlaceholder]}
-      />
-    ) : null
+    return this.props.preventOutsideInteraction ? <View
+      style={[StyleSheet.absoluteFill, styles.nonInteractionPlaceholder]} /> : null
   }
+
 
   render() {
     const containerVisible = this.state.containerVisible || this.props.visible
@@ -336,6 +334,8 @@ export class Modal extends React.Component<ModalProps, State> {
           onLayout={this.handleLayoutChange}
           pointerEvents='box-none'
         >
+
+
           {contentVisible && (
             <>
               {this.renderMask()}
